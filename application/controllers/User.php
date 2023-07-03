@@ -8,6 +8,7 @@ class User extends CI_Controller
   {
     parent::__construct();
     $this->load->model('M_user');
+		$this->load->model('Invoice');
   }
 
   public function index()
@@ -85,7 +86,7 @@ class User extends CI_Controller
   public function tabel_barangmasuk()
   {
     $this->load->view('user/templates/header.php');
-    $data['list_data'] = $this->M_user->select('tb_barang_masuk');
+		$data['tahun'] = $this->Invoice->gettahunMasuk();
     $this->load->view('user/tabel/tabel_barangmasuk',$data);
     $this->load->view('user/templates/footer.php');
   }
@@ -98,6 +99,7 @@ class User extends CI_Controller
   public function tabel_barangkeluar()
   {
     $this->load->view('user/templates/header.php');
+		$data['tahun'] = $this->Invoice->gettahun();
     $data['list_data'] = $this->M_user->select('tb_barang_keluar');
     $this->load->view('user/tabel/tabel_barangkeluar',$data);
     $this->load->view('user/templates/footer.php');

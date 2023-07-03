@@ -64,15 +64,15 @@
     <nav class="navbar navbar-inverse navbar-fixed-top bg-dark">
         <div class="container">
             <div class="navbar-header">
-                <a class="navbar-brand" href="<?= base_url('user')?>">Andini Salon| User</a>
+                <a class="navbar-brand" href="<?= base_url('user')?>">Andini Salon| Manajer</a>
             </div>
             <ul class="nav navbar-nav mr-auto">
                 <!-- <li><a class="nav-link" href="#">Home</a></li> -->
                 <li class="dropdown"><a class="bg-dark dropdown-toggle" data-toggle="dropdown" href="#"><i
-                            class="fa fa-database" aria-hidden="true"></i> Tabel <span class="caret"></span></a>
+                            class="fa fa-database" aria-hidden="true"></i> Report <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="<?=base_url('user/tabel_barangmasuk');?>">Tabel Pembelian Barang</a></li>
-                        <li><a href="<?=base_url('user/tabel_barangkeluar');?>">Tabel Penggunaan Barang</a></li>
+                        <li><a href="<?=base_url('user/tabel_barangmasuk');?>">Pembelian Barang</a></li>
+                        <li><a href="<?=base_url('user/tabel_barangkeluar');?>">Penggunaan Barang</a></li>
                         <!-- <li><a href="#">Tabel Gudang 3</a></li> -->
                     </ul>
                 </li>

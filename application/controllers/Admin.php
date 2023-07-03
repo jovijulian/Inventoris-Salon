@@ -301,7 +301,14 @@ class Admin extends CI_Controller
 	public function delete_barang($id_transaksi)
 	{
 		$where = array('id_transaksi' => $id_transaksi);
+		$data['data_barang_delete'] = $this->BarangMasuk->get_data('tb_barang_masuk', $where);
+		$where2 = array('id' => $data['data_barang_delete'][0]->id_barang);
+		$where3 = array('id' => $data['data_barang_delete'][0]->id_detail_barang);
+		// var_dump($data['data_barang_delete'][0]);
+		$this->M_admin->delete('tb_barang', $where2);
+		$this->M_admin->delete('tb_detail_barang', $where3);
 		$this->M_admin->delete('tb_barang_masuk', $where);
+
 		redirect(base_url('admin/tabel_barangmasuk'));
 	}
 
@@ -392,6 +399,23 @@ class Admin extends CI_Controller
 			$this->M_admin->insert('tb_barang_masuk', $data3);
 			####################################
 			// TABEL BARANG MASUK
+			####################################
+
+			####################################
+			// TABEL HISTORI
+			####################################
+			
+			$stok_awal       = $this->input->post('jumlah', TRUE);
+			
+
+			$data4 = array(
+				'id_transaksi'  => $id_transaksi,
+				'nama_barang'  => $nama_barang,
+				'stok_awal'       => $stok_awal,
+			);
+			$this->db->insert('tb_histori', $data4);
+			####################################
+			// TABEL HISTORI
 			####################################
 
 			$this->session->set_flashdata('success', 'Data Barang Berhasil Ditambahkan');
