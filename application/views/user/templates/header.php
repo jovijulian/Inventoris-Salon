@@ -18,6 +18,7 @@
     <script
         src="<?php echo base_url()?>assets/web_admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js">
     </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
 
     <style>
     .bg-dark {
@@ -55,6 +56,9 @@
 
     .navbar-brand {
         color: #fff;
+        font-family: 'Playfair Display', serif;
+        margin-left: 10px;
+        font-size: 14px;
     }
     </style>
 </head>
@@ -63,28 +67,27 @@
     <!-- navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top bg-dark">
         <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="<?= base_url('user')?>">Andini Salon| Manajer</a>
-            </div>
+
             <ul class="nav navbar-nav mr-auto">
-                <!-- <li><a class="nav-link" href="#">Home</a></li> -->
-                <li class="dropdown"><a class="bg-dark dropdown-toggle" data-toggle="dropdown" href="#"><i
-                            class="fa fa-database" aria-hidden="true"></i> Report <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="<?=base_url('user/tabel_barangmasuk');?>">Pembelian Barang</a></li>
-                        <li><a href="<?=base_url('user/tabel_barangkeluar');?>">Penggunaan Barang</a></li>
-                        <!-- <li><a href="#">Tabel Gudang 3</a></li> -->
-                    </ul>
+                <a href="<?= base_url('user')?>"> <span class="logo-mini"><img
+                            src="<?php echo base_url("assets/images/Magic-remove.png"); ?>" alt=""
+                            style="width: 140%; height: 70px; padding: 5px"></span></a>
+            </ul>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="<?= base_url('user')?>"
+                    style=" color: #fff;font-family: 'Playfair Display', serif;margin-left: 10px;font-size: 14px;">True
+                    beauty is <br> being true to yourself</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right" style="padding: 10px">
+
+                <li><a class="nav-link" style="color: #fff">Last Login : <?=$this->session->userdata('last_login')?></a>
                 </li>
-                <!-- <li><a class="nav-link" href="#"><i class="fa fa-book" aria-hidden="true"></i> Page 2</a></li>
-            <li><a class="nav-link" href="#"><i class="fa fa-address-book" aria-hidden="true"></i> Page 3</a></li> -->
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="nav-link">Last Login : <?=$this->session->userdata('last_login')?></a></li>
-                <li><a class="nav-link" href="<?= base_url('user/setting') ?>"><i class="fa fa-user"
+                <li><a class="nav-link" href="<?= base_url('user/setting') ?>" style="color: #fff"><i class="fa fa-user"
                             aria-hidden="true"></i> Setting</a></li>
-                <li><a class="nav-link" href="<?= base_url('user/signout')?>"><i class="fa fa-sign-out"
-                            aria-hidden="true"></i> Sign Out</a></li>
+                <li><a class="nav-link" href="<?= base_url('user/signout')?>" style="color: #fff"><i
+                            class="fa fa-sign-out" aria-hidden="true"></i> Sign Out</a></li>
             </ul>
+
+
         </div>
     </nav>

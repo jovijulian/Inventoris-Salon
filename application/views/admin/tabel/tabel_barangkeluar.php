@@ -74,7 +74,8 @@
                         <!-- /.box -->
                         <div class="box">
                             <div class="box-header">
-                                <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Stok Penggunaan
+                                <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Tabel Stok
+                                    Penggunaan
                                     Barang
                                 </h3>
                             </div>
@@ -402,6 +403,7 @@
     });
     </script>
 </body>
+
 
 
 

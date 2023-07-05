@@ -231,7 +231,7 @@
             <!-- <a href="#">Forgot your password?</a> -->
             <button>
                 <!-- <i class="spinner"></i> -->
-                <span class="state"><i class="fa fa-sign-in" aria-hidden="true"></i> Log in</span>
+                <span class="state"><i class="fa fa-sign-in" aria-hidden="true"></i> SUBMIT</span>
             </button>
         </form>
         <!-- <footer><a target="blank" href="http://unsadacoder.or.id">UnsadaCoder.or.id</a></footer> -->

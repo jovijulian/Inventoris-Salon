@@ -73,7 +73,7 @@
                         <!-- /.box -->
                         <div class="box">
                             <div class="box-header">
-                                <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Stok Supplier
+                                <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Tabel Satuan
                                 </h3>
                             </div>
                             <!-- /.box-header -->

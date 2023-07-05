@@ -73,7 +73,8 @@
                         <!-- /.box -->
                         <div class="box">
                             <div class="box-header">
-                                <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Kategori Barang
+                                <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Tabel Kategori
+                                    Barang
                                 </h3>
                             </div>
                             <!-- /.box-header -->
